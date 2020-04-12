@@ -1,0 +1,106 @@
+@import './default.scss';
+.main-container {
+  display: flex;
+  .nav-left {
+    background: $menubg;
+    .logo-info {
+      height: $menuLogoAreah;
+      img {
+        width: $menuLogoh;
+      }
+      .logo-title {
+        width: 50%;
+        color: #fff;
+      }
+    }
+    .ant-menu {
+      width: 100%;
+      .ant-menu-item {
+        margin-top: 0 !important;
+        padding-left: 24px !important;
+      }
+      .ant-menu-submenu-title {
+        padding: 0 24px !important;
+      }
+      .ant-menu-item-selected {
+        background: linear-gradient(
+          90deg,
+          $menuseleteds 0%,
+          $menuseletede 100%,
+          $menuseletede 100%
+        ) !important;
+        box-shadow: 0px 0px 1px 0px $menubg;
+        opacity: 0.7;
+      }
+      .ant-menu-inline-collapsed {
+        width: 100% !important;
+        .ant-menu-submenu-title {
+          left: 0;
+          padding: 0 16px !important;
+        }
+      }
+    }
+  }
+  .main {
+    height: calc(100vh);
+    background-color: $colorBG;
+    overflow: auto;
+    flex: 1;
+    .main-header {
+      height: $headerh;
+      // background: linear-gradient(315deg, $headere 0%, $headers 100%);
+      background: #fff;
+      .header-info {
+        .toggle-logo {
+          width: 48px;
+          padding: 4px 8px;
+          .anticon {
+            color: $colorH;
+            font-size: $fontC;
+          }
+        }
+        .middle {
+          flex: 1;
+          color: #fff;
+          margin: 0 16px;
+          .test-menu {
+            display: flex;
+            height: 100%;
+            .item-info {
+              width: 60px;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              color: $colorH;
+              cursor: pointer;
+              margin-right: 10px;
+              &:hover,
+              &:active {
+                border-top: 2px solid $headers;
+              }
+            }
+          }
+        }
+        .user-info {
+          width: 160px;
+          margin-right: 20px;
+          font-size: 12px;
+          // color: #fff;
+          .user-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px dotted gray;
+          }
+          .user-name {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .main-content {
+      position: relative;
+      margin: 20px;
+    }
+  }
+}

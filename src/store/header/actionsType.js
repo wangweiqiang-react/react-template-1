@@ -1,0 +1,3 @@
+export const USER_INFO = 'USER_INFO'
+export const IS_TOOGLE_MENU = 'IS_TOOGLE_MENU'
+export const CHANGE_MENU_SELECT = 'CHANGE_MENU_SELECT'
